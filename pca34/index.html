@@ -224,6 +224,23 @@
       font-style: italic;
     }
 
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0a0c12;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
     .no-results {
       text-align: center;
       padding: 4rem 2rem;
@@ -284,7 +301,7 @@ const sessions = [
       "Build camaraderie with fellow attendees through collaborative team competition"
     ],
     who: "Product managers and marketers at any level who want an energizing, social way to test and reinforce their industry knowledge.",
-    brief: "Show up ready to compete — this session rewards the product professionals who stay curious and broadly informed across the full spectrum of the discipline."
+    youtube: null
   },
   {
     title: "The Human-AI Gap: Optimizing Humans, Not Just Outputs",
@@ -298,7 +315,7 @@ const sessions = [
       "The most valuable AI applications augment human judgment rather than bypass it"
     ],
     who: "Product managers and UX practitioners building or evaluating AI-powered tools who want to ensure those tools genuinely serve their users.",
-    brief: "Reframe your AI strategy: stop optimizing for output volume and start designing for human cognitive performance."
+    youtube: "MCoLQ7Xh2lM"
   },
   {
     title: "How Product Marketers Can Avoid AI-washing",
@@ -312,7 +329,7 @@ const sessions = [
       "Apply practical guidelines for honest, compelling AI messaging that builds rather than erodes trust"
     ],
     who: "Product marketers and PMMs responsible for positioning AI-enabled products who want their messaging to be both persuasive and defensible.",
-    brief: "Before your next AI feature launch, audit your messaging against these fundamentals — your credibility with technical buyers depends on it."
+    youtube: "pOzFRhMDcGM"
   },
   {
     title: "Elevate Your API Game — Bring the Swagger Back",
@@ -326,7 +343,7 @@ const sessions = [
       "MCP is an emerging standard for making your stack AI-ready — understand it before your engineers have to explain it to you"
     ],
     who: "Product managers working on platforms, APIs, or developer-facing products who need to speak fluently with engineering about integration architecture and AI readiness.",
-    brief: "Treat your API strategy as a product strategy — invest in the foundations now so your platform is ready for the AI integrations your customers will demand next."
+    youtube: "hT0vybTt9rY"
   },
   {
     title: "Reverse Engineering Imagination",
@@ -340,7 +357,7 @@ const sessions = [
       "Building \"imagination breaks\" into your work rhythm is a productivity strategy, not a luxury"
     ],
     who: "Product managers and designers who feel their best ideas come too infrequently and want a repeatable method to spark creative thinking on demand.",
-    brief: "Schedule deliberate breaks into your week with the same rigor you schedule meetings — your next product breakthrough is probably waiting in the space between tasks."
+    youtube: "WPUTa8H3wi0"
   },
   {
     title: "From ROI to IOR: Aligning Inputs, Outputs, and Results for Product Managers in the AI Era",
@@ -354,7 +371,7 @@ const sessions = [
       "Aligning inputs and outputs to results improves both team accountability and executive communication"
     ],
     who: "Product managers at growth-stage or enterprise companies who want a clearer framework for demonstrating and driving impact in AI-accelerated product environments.",
-    brief: "Adopt IOR as your internal performance model — it will sharpen your prioritization decisions and make your impact undeniable to stakeholders."
+    youtube: null
   },
   {
     title: "The 30 Minute Hackathon: Redefining the Product Process with Vibe Coding",
@@ -368,7 +385,7 @@ const sessions = [
       "Engineering handoff becomes faster and clearer when prototypes are generated from structured user research inputs"
     ],
     who: "Product managers and designers who want to dramatically compress their discovery-to-prototype cycle and communicate requirements through working code rather than static docs.",
-    brief: "Run a 30-minute vibe coding sprint on your next feature idea before writing a single PRD — you'll validate faster and hand off cleaner."
+    youtube: "0_yL2HoMaE0"
   },
   {
     title: "From Idea to Working Prototype in an Afternoon: AI-Powered Discovery",
@@ -382,7 +399,7 @@ const sessions = [
       "AI-augmented workflows don't sacrifice rigor — they eliminate the dead time between steps"
     ],
     who: "Product managers and UX designers at teams with multi-week discovery cycles who are ready to pilot a faster, AI-assisted approach.",
-    brief: "Map your current discovery process and identify where AI can collapse the gaps — then run one afternoon sprint to prove it works."
+    youtube: null
   },
   {
     title: "Leading From Where You Are",
@@ -396,7 +413,7 @@ const sessions = [
       "Specific, actionable steps exist for expanding your leadership capacity from wherever you are today"
     ],
     who: "Early- to mid-career product managers who want to grow their organizational influence and leadership presence without waiting for a promotion.",
-    brief: "Stop waiting for the title — identify your current leadership persona this week and take one concrete step to expand your capacity."
+    youtube: null
   },
   {
     title: "Your Roadmap Heard It Through the Grapevine",
@@ -410,7 +427,7 @@ const sessions = [
       "Committing to direct customer conversations before each sprint is a discipline that pays compound returns in roadmap accuracy"
     ],
     who: "Product managers and team leads whose roadmap decisions are driven primarily by data dashboards and internal stakeholder input rather than direct customer dialogue.",
-    brief: "Before your next sprint planning, audit how much of your roadmap is based on direct customer conversations versus secondhand signals — then commit to closing the gap."
+    youtube: null
   },
   {
     title: "The Fist: Building High-Performing Product Teams",
@@ -424,7 +441,7 @@ const sessions = [
       "The Fist framework provides a memorable, actionable model for diagnosing and improving team performance"
     ],
     who: "Product managers and directors who lead or are building product teams and want a structured, proven approach to creating alignment and high performance.",
-    brief: "Apply The Fist framework to your current team — identify which of the five dimensions is weakest and address it before it becomes a culture problem."
+    youtube: "uljDS9nS1Y0"
   },
   {
     title: "Claude for Product Managers: Automate the Work. Elevate Your Impact",
@@ -438,7 +455,7 @@ const sessions = [
       "The barrier to getting started with Claude for PM workflows is lower than most expect — practical entry points exist today"
     ],
     who: "Product managers at any level who want a concrete, tool-specific introduction to integrating Claude into their daily workflow.",
-    brief: "Pick one recurring PM task this week — a status update, a research synthesis, or a requirements draft — and run it through Claude to see the time savings firsthand."
+    youtube: "lj9CCY0l3q0"
   },
   {
     title: "Monetize What You Know: AI-Powered Systems for Courses, Templates, and Automation Workflows",
@@ -452,7 +469,7 @@ const sessions = [
       "The monetization barrier for knowledge products is lower than ever — the bottleneck is system design, not content creation"
     ],
     who: "Product managers, marketers, and consultants who want to build side income or transition to entrepreneurship by productizing their existing professional knowledge.",
-    brief: "Identify one piece of expertise you've repeatedly shared for free and use this framework to outline a digital product you could sell within 30 days."
+    youtube: "yehD_sNvjg4"
   },
   {
     title: "Shipping on Someone Else's Roadmap: Lessons from Platform Ecosystems",
@@ -466,7 +483,7 @@ const sessions = [
       "Managing stakeholder expectations when roadmap control is limited demands a different communication playbook"
     ],
     who: "Product managers building on top of platforms like Salesforce, Shopify, or similar ecosystems who need strategies for thriving without full roadmap autonomy.",
-    brief: "Map your platform dependencies today and build a contingency strategy for each — don't wait for a breaking change to discover you have no plan."
+    youtube: "y5ZTJjQfwqQ"
   },
   {
     title: "Building a Software Startup in 7 Days from 0 to Monetization",
@@ -480,7 +497,7 @@ const sessions = [
       "The Masters Week constraint forced prioritization decisions that most products never face — and the lessons transfer broadly"
     ],
     who: "Aspiring solo founders and entrepreneurially-minded PMs who want a realistic, unvarnished view of what rapid product development actually looks like end-to-end.",
-    brief: "The next time you say \"we need six months to build this,\" ask yourself what version of it you could ship in seven days — and whether that version might be enough."
+    youtube: null
   },
   {
     title: "From 3 Agents to Agentic Enterprise: How to Lead AI Transformation Journey",
@@ -494,7 +511,7 @@ const sessions = [
       "Control and governance aren't constraints on AI transformation — they're what makes it sustainable"
     ],
     who: "Product and technology leaders at mid-to-large organizations who are past the AI pilot phase and need a framework for scaling agent systems responsibly.",
-    brief: "Assess where your organization sits on the pilot-to-enterprise spectrum and use the Agentic Catalyst framework to identify the one governance gap most likely to derail your next phase of AI scaling."
+    youtube: "jRck3ujY4as"
   },
   {
     title: "Double Referrals By Improving Your Customer Experience",
@@ -508,7 +525,7 @@ const sessions = [
       "The Magnetic Momentum Method provides a step-by-step approach to identifying and fixing the friction points that suppress referrals"
     ],
     who: "Product managers, customer success leaders, and CX practitioners who want to directly connect their experience improvements to measurable referral growth.",
-    brief: "Audit one stage of your customer journey this week and identify the single friction point most likely to suppress referrals — then fix it before optimizing anything else."
+    youtube: "6-IkGdoE0jg"
   },
   {
     title: "From Big Tech (Amazon) to an AI Native Startup: Lessons I Learned Thus Far",
@@ -522,7 +539,7 @@ const sessions = [
       "The PM-engineering-design relationship is fundamentally different at AI-native companies — adapting quickly is a competitive advantage"
     ],
     who: "Mid-to-senior PMs at large tech companies who are curious about or planning a transition to startup or AI-native environments.",
-    brief: "List the three enterprise PM habits you rely on most and honestly assess which ones would help, which would hurt, and which would be irrelevant at an AI-native startup."
+    youtube: null
   },
   {
     title: "4 Keys to Embedding Innovation in Your Team Culture",
@@ -536,7 +553,7 @@ const sessions = [
       "NASA and UnitedHealth Group training principles translate directly into practical team leadership interventions"
     ],
     who: "Team leads, product directors, and people managers who want to build durable innovation capacity into their teams rather than relying on isolated brainstorming events.",
-    brief: "Identify one team habit that currently suppresses innovation and replace it with a specific, repeatable behavior from this session's four principles."
+    youtube: null
   },
   {
     title: "How Personalized AI Can Transform Your First 90 Days on the Job",
@@ -550,7 +567,7 @@ const sessions = [
       "The prototype demonstrates a practical, buildable model that product teams can apply to their own onboarding or user education challenges"
     ],
     who: "Product managers in HR tech, learning and development, or enterprise SaaS who want to explore how AI personalization can improve onboarding outcomes for diverse user populations.",
-    brief: "Challenge your current onboarding or user education design by asking how well it serves someone who learns fundamentally differently from the person who designed it — then explore one AI-powered adaptation."
+    youtube: "fIThDvr2YJo"
   },
   {
     title: "The Product Management Collapse: The Rise of the AI Orchestrator",
@@ -564,7 +581,7 @@ const sessions = [
       "Independent building is now accessible to PMs who embrace this shift — the barriers to solo product creation have collapsed"
     ],
     who: "Product managers at any level who want to understand how AI is restructuring the PM role and how to position themselves for the emerging AI Orchestrator model.",
-    brief: "Stop thinking about AI as a tool that helps you do your current job — start thinking about what new job it makes possible for you."
+    youtube: "luKl2k2FqE4"
   },
   {
     title: "STAR Isn't Just for Interviews: Using Structured Storytelling to Drive Alignment",
@@ -578,7 +595,7 @@ const sessions = [
       "Enterprise B2B PMs face specific alignment challenges that STAR-based communication is particularly well-suited to address"
     ],
     who: "Product managers in enterprise B2B environments who regularly present roadmaps, write PRDs, or onboard stakeholders and want to improve their clarity and alignment success rate.",
-    brief: "Rewrite the intro of your next PRD or roadmap presentation using the STAR structure and measure whether stakeholder questions shift from \"what does this mean\" to \"how do we prioritize this.\""
+    youtube: "0rTBi3CQvpQ"
   },
   {
     title: "What Snacking in Star Trek Teaches Us About Building with Generative AI",
@@ -592,7 +609,7 @@ const sessions = [
       "Resource constraints in AI systems create product design tradeoffs that need to be surfaced and managed, not hidden"
     ],
     who: "Product managers and designers building generative AI features who want a memorable, conceptually rich framework for thinking about intent, bias, and constraint in their systems.",
-    brief: "The next time you define an AI feature's scope, ask the Star Trek question: what happens when the user's request is technically fulfilled but completely wrong — and design for that gap."
+    youtube: null
   },
   {
     title: "How I Vibe Coded the Voting & Scheduling App for ProductCamp Austin",
@@ -606,7 +623,7 @@ const sessions = [
       "Building the tool that ran ProductCamp's own voting is proof that PMs can ship functional, production-adjacent software with modern AI assistance"
     ],
     who: "Product managers who want to understand vibe coding from a practitioner's perspective and are curious whether they could build lightweight tools for their own teams or workflows.",
-    brief: "Pick the smallest, most painful internal tool your team lacks and try vibe coding a rough version of it this week — the process will teach you more than any tutorial."
+    youtube: "oPM4Vx3yLwk"
   },
   {
     title: "From Enterprise PM to Solo Founder: What Translates, What Doesn't, and What Drove First Revenue",
@@ -620,7 +637,7 @@ const sessions = [
       "First revenue is a learnable outcome — specific, translatable approaches exist for reaching it faster than most enterprise PMs expect"
     ],
     who: "Senior product managers with enterprise backgrounds who are seriously considering or actively planning a transition to solo founding or early-stage startup roles.",
-    brief: "Map your enterprise PM skills into three buckets — keep, adapt, and unlearn — and let that map guide your first 90 days if you make the leap."
+    youtube: null
   },
   {
     title: "Landing a PM Role in 2026",
@@ -634,7 +651,8 @@ const sessions = [
       "Panel perspectives from practitioners who have recently hired or been hired provide ground-truth calibration that job search advice rarely includes"
     ],
     who: "Aspiring PMs, PMs between roles, and PMs considering a move who want a current, practical guide to navigating the 2026 hiring landscape.",
-    brief: "Update your job search strategy before your next application — the tools and signals that worked in 2023 are not the ones that will get you hired in 2026."
+    brief: "Update your job search strategy before your next application — the tools and signals that worked in 2023 are not the ones that will get you hired in 2026.",
+    youtube: "63gbR639514"
   }
 ];
 
@@ -694,8 +712,13 @@ function renderCards() {
         <ul class="takeaways">${s.takeaways.map(t => `<li>${t}</li>`).join('')}</ul>
         <div class="section-label">Who Should Read This</div>
         <div class="who">${s.who}</div>
-        <div class="section-label">The Brief</div>
-        <div class="brief">${s.brief}</div>
+        ${s.brief ? `<div class="section-label">The Brief</div>
+        <div class="brief">${s.brief}</div>` : ''}
+        ${s.youtube ? `
+        <div class="section-label">Session Video</div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/${s.youtube}" allowfullscreen loading="lazy"></iframe>
+        </div>` : ''}
       </div>
     </div>
   `).join('');
