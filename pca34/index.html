@@ -224,6 +224,23 @@
       font-style: italic;
     }
 
+    .onda-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: #008B82;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.15s;
+    }
+    .onda-btn:hover { background: #006d65; }
+
     .video-wrap {
       position: relative;
       padding-bottom: 56.25%;
@@ -453,7 +470,8 @@ const sessions = [
     ],
     who: "Product managers and directors who lead or are building product teams and want a structured, proven approach to creating alignment and high performance.",
     brief: "Apply The Fist framework to your current team — identify which of the five dimensions is weakest and address it before it becomes a culture problem.",
-    youtube: "uljDS9nS1Y0"
+    youtube: "uljDS9nS1Y0",
+    onda: "https://raw.githubusercontent.com/david78737/pca34/main/pca34/ian_brand_pca_34.onda"
   },
   {
     title: "Claude for Product Managers: Automate the Work. Elevate Your Impact",
@@ -740,6 +758,9 @@ function renderCards() {
         <div class="who">${s.who}</div>
         <div class="section-label">The Brief</div>
         <div class="brief">${s.brief}</div>
+        ${s.onda ? `
+        <div class="section-label">ONDA Replay Bundle</div>
+        <a class="onda-btn" href="${s.onda}" download>&#9654; Open in ONDA Replay</a>` : ''}
         ${s.youtube ? `
         <div class="section-label">Session Video</div>
         <div class="video-wrap">
