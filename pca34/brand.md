@@ -1,7 +1,5 @@
 # The Fist: Building High-Performing Product Teams
-**Ian Brand** · PCA34 · April 18, 2026
-
-https://youtu.be/uljDS9nS1Y0?si=O0_YlNmIw7K_ZhGN
+**Ian Brand** · PCA34 · April 18, 2026 https://youtu.be/uljDS9nS1Y0?si=O0_YlNmIw7K_ZhGN
 
 ## Synopsis
 Brand draws on sports team models to present a framework — "The Fist" — for building product teams that are aligned, mission-driven, and high-performing. The workshop goes beyond theory with real examples from toxic environment turnarounds, making it applicable to teams in distress as much as those seeking to level up. For product leaders inheriting dysfunctional teams, this is a structured playbook for cultural reset.
