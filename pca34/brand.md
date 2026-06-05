@@ -1,5 +1,6 @@
 # The Fist: Building High-Performing Product Teams
 **Ian Brand** · PCA34 · April 18, 2026 
+
 https://youtu.be/uljDS9nS1Y0?si=O0_YlNmIw7K_ZhGN
 
 ## Synopsis
